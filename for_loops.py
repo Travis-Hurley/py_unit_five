@@ -1,6 +1,8 @@
 
 #Travis Hurley, Nov-10-22
-def count(first, last):
+def count(number, number2):
+    for x in range(number, number2):
+        print(x)
     """
     This function will create a string of numbers separated by a space. The numbers will start with the
     first number and end with the second. The second number SHOULD be included as part of the string. If
@@ -10,12 +12,14 @@ def count(first, last):
     :param second: The final number. Must be included
     :return: A string containing the numbers
     """
-    pass # make sure to delete this line when you write your own function
-
-
+"""
 def main():
-    print(count(0, 6))
-
-
+    count(0,7)
 if __name__ == '__main__':
     main()
+"""
+test = ""
+for x in range( 3 ):
+     test += str(x)
+
+print(test)

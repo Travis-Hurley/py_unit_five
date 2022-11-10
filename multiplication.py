@@ -4,4 +4,3 @@ def multiplication_table(number):
     :param number: An integer
     :return: A string of 12 values representing the mulitiplication table of the parameter number.
     """
-    pass # Make sure to delete this line when writing your function.
