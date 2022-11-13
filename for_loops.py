@@ -1,25 +1,37 @@
-
-#Travis Hurley, Nov-10-22
+#Travis Hurley, Nov-13-22
+"""
 def count(number, number2):
     for x in range(number, number2):
-        print(x)
-    """
-    This function will create a string of numbers separated by a space. The numbers will start with the
-    first number and end with the second. The second number SHOULD be included as part of the string. If
-    the first number is larger than the second, the numbers should count down, rather than up.
-    count(5, 10) returns "5 6 7 8 9 10 "
-    :param first: The starting number
-    :param second: The final number. Must be included
-    :return: A string containing the numbers
-    """
-"""
+        return(x)
+
 def main():
-    count(0,7)
+    print(count(0,7))
 if __name__ == '__main__':
     main()
 """
-test = ""
-for x in range( 3 ):
-     test += str(x)
+def count(number1,number2):
+    test = ""
+    for x in range(number1,1+number2):
+        test += str(x)+(" ")
+    test2 = ""
+    for x in range(number2,number1-1,-1):
+        test2 += str(x)+(" ")
+    return "Counting up > "+str(test)+ "         " +"Counting down > "+str(test2)
+def fake_main():
+    print(count(0,6))
 
-print(test)
+"""look at real_count for the HW"""
+def real_count(num1,num2):
+    if num1>num2:
+        real1 = ""
+        for x in range(num1,num2-1,-1):
+            real1 += str(x)+(" ")
+        return real1
+    elif num1<num2:
+        real2 = ""
+        for x in range(num1,num2+1):
+            real2 += str(x) + (" ")
+        return real2
+def main():
+    print(real_count(6,0))
+main()
