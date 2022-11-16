@@ -1,6 +1,17 @@
-def fibonacci(x):
-    """
-    Ex. fibonacci(5) returns "1 1 2 3 5 "
-    :param number: The number of Fibonacci terms to return
-    :return: A string consisting of a number of terms of the Fibonacci sequence.
-    """
+def fibonacci(num):
+    a=1
+    b=1
+    test = ""
+    for x in range(num-2):
+        c = a + b
+        a = b
+        b = c
+        test += str(c) + (" ")
+    return test
+def main():
+    num=int(input("How many numbers would you like? > "))
+    if num==1:
+        print(str(1) + " " + fibonacci(num))
+    else:
+        print(str(1)+(" ")+str(1)+" "+fibonacci(num))
+main()
