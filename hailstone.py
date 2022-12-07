@@ -11,5 +11,6 @@ def sequence(number):
             break
     return(step)
 def main():
-    print(sequence(13))
+    number=int(input("What number would you like to use? > "))
+    print(sequence(number))
 main()
