@@ -5,7 +5,8 @@ average = 0
 def get_guess(average):
     test = ""
     for x in range(3):
-        number = random.randint(1, 5)
+        number = random.randint(1, 2)
+        while True:
             guess = int(input("What is your guess? > "))
             if guess<number:
                 average += 1
@@ -17,10 +18,11 @@ def get_guess(average):
                 average += 1
                 print("Yes! That is it!")
                 print(average)
+                break
+    comb=average/3
+    print("Your average per game was " +str(round((comb,2))) +" guesses.")
 
 def main():
     print("Welcome to my guessing game!")
     get_guess(average)
-    all = average/3
-    print("Your average guess per game was "+str(all))
-main()
+    print("Thank your for playing!")
