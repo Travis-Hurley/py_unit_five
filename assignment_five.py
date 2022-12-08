@@ -2,29 +2,40 @@
 
 import random
 average = 0
-def get_guess(average):
+total=0
+
+def get_number():
+    number = random.randint(1, 2)
+    return number
+def get_guess(average,total,number):
     test = ""
     for x in range(3):
-        number = random.randint(1, 2)
+        get_number()
         while True:
             guess = int(input("What is your guess? > "))
             if guess<number:
                 average += 1
-                print("Higher! "+ str(average))
+                print("Higher! ")
             elif guess>number:
                 average += 1
-                print("Lower! " + str(average))
+                print("Lower! ")
             else:
                 average += 1
-                print("Yes! That is it!")
-                print(average)
+                average -= abs(total)
+                abs(average)
+                total+=average
+                print("this is total "+str(total))
+                print("Yes! That is it! It took you "+str(average)+" guesses to get the number.")
                 break
-    comb=average/3
+    print("This is total "+str(total))
+    comb=total/3
     new=round(comb,2)
     print("Your average per game was " +str(new) +" guesses.")
 
+
 def main():
-    print("Welcome to my guessing game!")
-    get_guess(average)
+    number=get_number()
+    print("Welcome to my guessing game! Try and guess my number between 1-100.")
+    get_guess(average,total,number)
     print("Thank your for playing!")
 main()
