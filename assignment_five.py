@@ -20,9 +20,11 @@ def get_guess(average):
                 print(average)
                 break
     comb=average/3
-    print("Your average per game was " +str(round((comb,2))) +" guesses.")
+    new=round(comb,2)
+    print("Your average per game was " +str(new) +" guesses.")
 
 def main():
     print("Welcome to my guessing game!")
     get_guess(average)
     print("Thank your for playing!")
+main()
