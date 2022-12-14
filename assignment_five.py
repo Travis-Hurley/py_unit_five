@@ -1,4 +1,4 @@
-# Assignment five - guessing game 1-100 that calculates average guesses - Travis Hurley - dec-12-22
+# Assignment five - guessing game 1-100 that calculates average guesses - Travis Hurley - dec-14-22
 
 import random
 average = 0                                  # creates average and total to be used in get_guess
@@ -8,7 +8,7 @@ total = 0
 def get_number():
     '''
     this function generates random number
-    :return: random integer
+    :return: random integer in int form
     '''
     number = random.randint(1, 100)
     return number
@@ -18,9 +18,9 @@ def get_guess(average, total, number):
     '''
     Runs the guessing game three times while stating higher, lower, or correct in response to the guess.
     Outputs the amount of guesses per game and average over all three games
-    :param average: amount of guesses per game used to add to the total for later average
-    :param total: total amount of guesses for all three games
-    :param number: the random integer
+    :param average: amount of guesses per game used to add to the total for later average (int)
+    :param total: total amount of guesses for all three games (int)
+    :param number: the random integer (int)
     :return: does not return anything
     '''
     test = ""
